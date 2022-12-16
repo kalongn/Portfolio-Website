@@ -7,13 +7,19 @@
 
 :root {
     --color-primary: #d8d8cd;
-    --color-secondary: #a2a299;
+    --color-invertedPrimary: #272732;
     --color-red: #ff6b6b;
+    --color-invertedRed: #009494;
     --color-green: #6bffb0;
+    --color-invertedGreen: #94004f;
     --color-blue: #6970ff;
+    --color-invertedBlue: #968f00;
 }
 
 body {
-    background-color: grey;
+    background-color: var(--color-primary);
     font-family: 'Chivo Mono', monospace;
+    font-size: 1.2rem;
+    color: var(--color-invertedPrimary);
+    transition: all .3s ease-in-out;
 }
