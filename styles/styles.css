@@ -14,6 +14,8 @@
     --color-invertedGreen: #94004f;
     --color-blue: #6970ff;
     --color-invertedBlue: #968f00;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
 }
 
 body {
@@ -22,4 +24,49 @@ body {
     font-size: 1.2rem;
     color: var(--color-invertedPrimary);
     transition: all .3s ease-in-out;
+}
+
+header {
+    height: auto;
+    font-size: 1.32rem;
+    background-color: var(--color-white);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-invertedPrimary);
+}
+
+a:hover {
+    color: var(--color-red);
+}
+
+.active {
+    color: var(--color-invertedRed);
+}
+
+.nav-name {
+    padding-left: 30px;
+    padding-right: 63%;
+}
+
+.icons {
+    height: auto;
+    width: auto;
+    max-height: 30px;
+    max-width: 30px;
 }
