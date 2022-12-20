@@ -33,15 +33,6 @@ header {
     background-color: var(--color-white);
 }
 
-aside {
-    float: right;
-    width: auto;
-    max-width: 120px;
-    height: 100vh;
-    font-size: 1.32rem;
-    background-color: var(--color-white);
-}
-
 .headNavUl {
     list-style-type: none;
     margin: 0;
@@ -82,4 +73,86 @@ a:hover {
 .logos {
     height: 1.8rem;
     width: 1.8rem;
+}
+
+.pageContentWrapper {
+    padding-top: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.name {
+    font-size: 75px;
+    text-align: center;
+}
+
+.description {
+    font-size: 24px;
+    text-align: center;
+}
+
+.iconsLeft {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    overflow: hidden;
+    justify-content: center;
+    gap: 45px;
+}
+
+div ul li.icons {
+    width: 45px;
+    height: 45px;
+    max-width: 60px;
+    max-height: 60px;
+}
+
+li.temp {
+    background: var(--color-invertedPrimary);
+}
+
+.rightSideContentWrapper {
+    background: var(--color-black);
+    position: relative;
+}
+
+.rightSideContentWrapper .mainImage {
+    position: relative;
+    background-color: var(--color-invertedPrimary);
+    height: 333px;
+    width: 333px;
+    z-index: 4;
+}
+
+.rightSideContentWrapper .redSquare {
+    position: absolute;
+    background-color: var(--color-red);
+    height: 180px;
+    width: 180px;
+    top: 200px;
+    left: 200px;
+    z-index: 3;
+}
+
+.rightSideContentWrapper .greenSquare {
+    position: absolute;
+    background-color: var(--color-green);
+    height: 150px;
+    width: 150px;
+    top: 275px;
+    left: 150px;
+    z-index: 2;
+}
+
+.rightSideContentWrapper .blueSquare {
+    position: absolute;
+    background-color: var(--color-blue);
+    height: 120px;
+    width: 120px;
+    top: 325px;
+    left: 300px;
 }
