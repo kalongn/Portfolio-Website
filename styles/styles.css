@@ -28,18 +28,28 @@ body {
 
 header {
     height: auto;
+    max-height: 120px;
     font-size: 1.32rem;
     background-color: var(--color-white);
 }
 
-ul {
+aside {
+    float: right;
+    width: auto;
+    max-width: 120px;
+    height: 100vh;
+    font-size: 1.32rem;
+    background-color: var(--color-white);
+}
+
+.headNavUl {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li {
+.headNavLi {
     float: left;
     padding-left: 2%;
     padding-top: 1%;
@@ -65,8 +75,11 @@ a:hover {
 }
 
 .icons {
-    height: auto;
-    width: auto;
     max-height: 30px;
     max-width: 30px;
+}
+
+.logos {
+    height: 1.8rem;
+    width: 1.8rem;
 }
