@@ -84,11 +84,11 @@ a {
 }
 
 a:hover {
-    color: var(--color-red);
+    color: var(--color-invertedRed);
 }
 
 .active {
-    color: var(--color-invertedRed);
+    color: var(--color-red);
 }
 
 .icons {
@@ -102,7 +102,7 @@ a:hover {
 }
 
 .pageContentWrapper {
-    padding-top: 12%;
+    padding-top: 9%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,11 +130,15 @@ a:hover {
     gap: 45px;
 }
 
-div ul li.icons {
+div ul li a img.icons {
     width: 45px;
     height: 45px;
     max-width: 60px;
     max-height: 60px;
+}
+
+div ul li a img.icons:hover {
+    filter: invert();
 }
 
 li.temp {
