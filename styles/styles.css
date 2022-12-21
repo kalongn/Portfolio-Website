@@ -27,10 +27,11 @@ body {
 }
 
 header {
-    height: auto;
-    max-height: 120px;
+    min-height: auto;
+    height: 60px;
     font-size: 1.32rem;
     background-color: var(--color-white);
+    box-shadow: 0px 1px 30px rgba(39, 39, 50, 0.3);
 }
 
 .headNavUl {
@@ -38,14 +39,44 @@ header {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 1.5rem;
+}
+
+.headNavUl:first-child {
+    margin-left: 18px;
+}
+
+.headNavUl>li:nth-child(2) {
+    margin-left: auto;
+}
+
+.headNavUl>li:last-child {
+    margin-right: 18px;
 }
 
 .headNavLi {
     float: left;
-    padding-left: 2%;
     padding-top: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 0.9%;
 }
+
+.headNavLi a.icons {
+    display: none;
+}
+
+/*@media screen and (max-width: 1024px) {
+    .headNavUl li:not(:nth-child(-n + 2)) {
+        display: none;
+    }
+
+    .headNavUl li a.icons {
+        float: right;
+        display: block;
+    }
+}*/
 
 a {
     text-decoration: none;
@@ -58,11 +89,6 @@ a:hover {
 
 .active {
     color: var(--color-invertedRed);
-}
-
-.nav-name {
-    padding-left: 30px;
-    padding-right: 63%;
 }
 
 .icons {
