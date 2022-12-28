@@ -1,3 +1,4 @@
+/* General Setting */
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +26,8 @@ body {
     color: var(--color-invertedPrimary);
     transition: all .1s ease-in-out;
 }
+
+/* Navigation Bar */
 
 header {
     min-height: auto;
@@ -101,7 +104,9 @@ a:hover {
     width: 1.8rem;
 }
 
-.pageContentWrapper {
+/*Home page*/
+
+.homePageContentWrapper {
     padding-top: 9%;
     display: flex;
     justify-content: center;
@@ -185,4 +190,37 @@ li.temp {
     width: 120px;
     top: 325px;
     left: 300px;
+}
+
+/*Work Page*/
+
+.workPageContentWrapper {
+    padding-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projectsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.projectImages {
+    position: relative;
+    height: 450px;
+    width: 600px;
+    background-color: var(--color-black);
+}
+
+.projectName {
+    position: absolute;
+    left: 3%;
+    bottom: 3%;
+    color: var(--color-white);
+    
 }
