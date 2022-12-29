@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap" rel="stylesheet">
 </head>
 
-<body class="main-content">
+<body class="main-content" onload="startWorkWeb();">
+    <script src="script.js"></script>
     <header class="headNav">
         <nav>
             <ul class="headNavUl" id="topNavBar">
@@ -29,23 +30,22 @@
         <div class="workPageContentWrapper">
             <div class="projectsWrapper">
                 <div class="leftArrowClicker">
-                    <h1 class="leftArrow">&#x3c;</h1>
+                    <h1 class="leftArrow" onclick="leftArrow();">&#x3c;</h1>
                 </div>
-                <div class="projectImages">
-                    <h2 class="projectName">
-                        NAME
-                    </h2>
+                <div class="projectImagesWrapper">
+                    <img src="" alt="test" id="projectImages">
+                    <h2 id="projectName"></h2>
                 </div>
                 <div class="rightArrowClicker">
-                    <h1 class="rightArrow">&#x3e;</h1>
+                    <h1 class="rightArrow" onclick="rightArrow();">&#x3e;</h1>
                 </div>
             </div>
-            <div class="projectPageIndicator">
-                Bars goes here to indicate pages
+            <div class="projectPageIndicatorWrapper">
+                <div id="indicator0"class="active"></div>
+                <div id="indicator1"></div>
+                <div id="indicator2"></div>
             </div>
-            <div class="projectDescription">
-                Stuff goes here
-            </div>
+            <div id="projectDescription"></div>
         </div>
     </main>
 </body>

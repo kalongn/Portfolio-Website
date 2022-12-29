@@ -210,17 +210,69 @@ li.temp {
     gap: 100px;
 }
 
-.projectImages {
+.projectImagesWrapper {
     position: relative;
     height: 450px;
     width: 600px;
-    background-color: var(--color-black);
 }
 
-.projectName {
+.projectImagesWrapper img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    filter: opacity(0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projectImagesWrapper img:hover {
+    filter: saturate(1);
+}
+
+#projectName {
     position: absolute;
     left: 3%;
     bottom: 3%;
     color: var(--color-white);
     
+}
+
+#projectDescription {
+    line-break: auto;
+    max-width: 600px;
+    max-height: 450px;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.leftArrow, .rightArrow {
+    color: var(--color-invertedPrimary);
+}
+
+.leftArrow:hover, .rightArrow:hover {
+    color: var(--color-red);
+    cursor: pointer;
+}
+
+.projectPageIndicatorWrapper {
+    width: 600px;
+    height: 15px;
+    gap: 9px;
+    display:flex;
+}
+
+.projectPageIndicatorWrapper>*{
+    width: 194px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.30);
+}
+
+.projectPageIndicatorWrapper>*.active{
+    width: 194px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
 }
