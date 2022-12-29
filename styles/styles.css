@@ -214,6 +214,7 @@ li.temp {
     position: relative;
     height: 450px;
     width: 600px;
+    background-color: rgba(0, 0, 0, 0.18);
 }
 
 .projectImagesWrapper img {
