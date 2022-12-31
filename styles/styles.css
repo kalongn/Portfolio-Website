@@ -22,7 +22,7 @@
 body {
     background-color: var(--color-primary);
     font-family: 'Chivo Mono', monospace;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--color-invertedPrimary);
     transition: all .1s ease-in-out;
 }
@@ -31,20 +31,13 @@ body {
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
- 
-    /*
-      Introduced in IE 10.
-      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-    */
     -ms-user-select: none;
     user-select: none;
- }
+}
 
 /* Navigation Bar */
 
 header {
-    min-height: auto;
-    height: 60px;
     font-size: 1.32rem;
     background-color: var(--color-white);
     box-shadow: 0px 1px 30px rgba(39, 39, 50, 0.3);
@@ -54,15 +47,13 @@ header {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    gap: 1.5rem;
+    gap: 1.375rem;
+    align-items: center;
 }
 
 .headNavUl:first-child {
-    margin-left: 18px;
+    margin-left: 1em;
 }
 
 .headNavUl>li:nth-child(2) {
@@ -70,29 +61,14 @@ header {
 }
 
 .headNavUl>li:last-child {
-    margin-right: 18px;
+    margin-right: 1em;
 }
 
 .headNavLi {
     float: left;
-    padding-top: 1%;
-    padding-bottom: 0.9%;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
 }
-
-.headNavLi a.icons {
-    display: none;
-}
-
-/*@media screen and (max-width: 1024px) {
-    .headNavUl li:not(:nth-child(-n + 2)) {
-        display: none;
-    }
-
-    .headNavUl li a.icons {
-        float: right;
-        display: block;
-    }
-}*/
 
 a {
     text-decoration: none;
@@ -108,51 +84,51 @@ a:hover {
 }
 
 .icons {
-    max-height: 30px;
-    max-width: 30px;
+    max-height: 1.875em;
+    max-width: 1.875em;
 }
 
 .logos {
-    height: 1.8rem;
-    width: 1.8rem;
+    height: 1.8em;
+    width: 1.8em;
 }
+
+
 
 /*Home page*/
 
 .homePageContentWrapper {
-    padding-top: 9%;
+    padding-top: 9rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 120px;
+    gap: 9rem;
 }
 
 .name {
-    font-size: 75px;
+    font-size: 3.375em;
     text-align: center;
 }
 
 .description {
-    font-size: 24px;
+    font-size: 1.625rem;
     text-align: center;
 }
 
 .iconsLeft {
     display: flex;
-    list-style-type: none;
     margin: 0;
     padding: 0;
-    padding-top: 60px;
-    overflow: hidden;
+    padding-top: 3rem;
     justify-content: center;
-    gap: 45px;
+    gap: 3rem;
 }
 
 div ul li a img.icons {
-    width: 45px;
-    height: 45px;
-    max-width: 60px;
-    max-height: 60px;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    max-width: 3.75rem;
+    max-height: 3.75rem;
 }
 
 div ul li a img.icons:hover {
@@ -164,45 +140,80 @@ li.temp {
 }
 
 .rightSideContentWrapper {
-    background: var(--color-black);
     position: relative;
 }
 
 .rightSideContentWrapper .mainImage {
     position: relative;
     background-color: var(--color-invertedPrimary);
-    height: 333px;
-    width: 333px;
+    height: 20.5rem;
+    width: 20.5rem;
     z-index: 4;
 }
 
 .rightSideContentWrapper .redSquare {
     position: absolute;
     background-color: var(--color-red);
-    height: 180px;
-    width: 180px;
-    top: 200px;
-    left: 200px;
+    height: 11.25rem;
+    width: 11.25rem;
+    top: 12.5rem;
+    left: 12.5rem;
     z-index: 3;
+    opacity: .95;
 }
 
 .rightSideContentWrapper .greenSquare {
     position: absolute;
     background-color: var(--color-green);
-    height: 150px;
-    width: 150px;
-    top: 275px;
-    left: 150px;
+    height: 9.375rem;
+    width: 9.375rem;
+    top: 17.188rem;
+    left: 9.375rem;
     z-index: 2;
+    opacity: .95;
 }
 
 .rightSideContentWrapper .blueSquare {
     position: absolute;
     background-color: var(--color-blue);
-    height: 120px;
-    width: 120px;
-    top: 325px;
-    left: 300px;
+    height: 7.5rem;
+    width: 7.5rem;
+    top: 20.313rem;
+    left: 18.75rem;
+    opacity: .95;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .homePageContentWrapper {
+        flex-direction: column;
+    }
+
+    .rightSideContentWrapper .redSquare {
+        height: 18rem;
+        width: 18rem;
+        top: 4.5rem;
+        left: 5rem;
+    }
+
+    .rightSideContentWrapper .greenSquare {
+        height: 16rem;
+        width: 16rem;
+        top: 7.8rem;
+        left: -2.4rem;
+    }
+
+    .rightSideContentWrapper .blueSquare {
+        height: 14rem;
+        width: 15rem;
+        top: 11.4rem;
+        left: 3rem;
+    }
+
+    .rightSideContentWrapper {
+        margin-bottom: 10rem;
+    }
+
 }
 
 /*Work Page*/
@@ -251,7 +262,6 @@ li.temp {
     left: 3%;
     bottom: 3%;
     color: var(--color-white);
-    
 }
 
 #projectDescription {
@@ -263,11 +273,13 @@ li.temp {
     text-decoration: underline;
 }
 
-.leftArrow, .rightArrow {
+.leftArrow,
+.rightArrow {
     color: var(--color-invertedPrimary);
 }
 
-.leftArrow:hover, .rightArrow:hover {
+.leftArrow:hover,
+.rightArrow:hover {
     color: var(--color-red);
     cursor: pointer;
 }
@@ -276,16 +288,16 @@ li.temp {
     width: 600px;
     height: 15px;
     gap: 9px;
-    display:flex;
+    display: flex;
 }
 
-.projectPageIndicatorWrapper>*{
+.projectPageIndicatorWrapper>* {
     width: 194px;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.30);
 }
 
-.projectPageIndicatorWrapper>*.active{
+.projectPageIndicatorWrapper>*.active {
     width: 194px;
     height: 100%;
     background-color: rgba(255, 255, 255, 1);
