@@ -219,7 +219,7 @@ li.temp {
 /*Work Page*/
 
 .workPageContentWrapper {
-    padding-top: 6%;
+    padding-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,26 +231,27 @@ li.temp {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 6.25rem;
 }
 
 .projectImagesWrapper {
     position: relative;
-    height: 450px;
-    width: 600px;
+    height: 28.125rem;
+    width: 37.5rem;
     background-color: rgba(0, 0, 0, 0.18);
 }
 
+.projectImagesWrapper {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .projectImagesWrapper img {
-    object-fit: fill;
-    width: 100%;
-    height: 100%;
     max-width: 100%;
-    max-height: 100%;
+    height: max-content;
     filter: opacity(0.5);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .projectImagesWrapper img:hover {
@@ -259,15 +260,14 @@ li.temp {
 
 #projectName {
     position: absolute;
-    left: 3%;
-    bottom: 3%;
+    left: 1.5rem;
+    bottom: 1.5rem;
     color: var(--color-white);
 }
 
 #projectDescription {
     line-break: auto;
-    max-width: 600px;
-    max-height: 450px;
+    max-width: 37.5rem;
     text-align: center;
     font-size: 1rem;
     text-decoration: underline;
@@ -285,20 +285,43 @@ li.temp {
 }
 
 .projectPageIndicatorWrapper {
-    width: 600px;
-    height: 15px;
-    gap: 9px;
+    width: 37.5rem;
+    height: 1rem;
+    gap: 0.563rem;
     display: flex;
 }
 
 .projectPageIndicatorWrapper>* {
-    width: 194px;
+    width: 12.125rem;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.30);
 }
 
 .projectPageIndicatorWrapper>*.active {
-    width: 194px;
-    height: 100%;
     background-color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 800px) {
+    .projectImagesWrapper {
+        width: 18rem;
+        height: 15rem;
+    }
+
+    .projectsWrapper {
+        gap: 3rem;
+    }
+
+    .projectPageIndicatorWrapper {
+        width: 18rem;
+    }
+
+    #projectName {
+        left: 0.75rem;
+        bottom: 0.75rem;
+        font-size: 1rem;
+    }
+
+    #projectDescription {
+        max-width: 18rem;
+    }
 }
