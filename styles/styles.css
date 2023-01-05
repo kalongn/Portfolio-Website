@@ -392,12 +392,28 @@ li.temp {
 
 .contactBox>h1 {
     padding-top: 0.9rem;
+    font-size: 3rem;
 }
 
 .contactBox>* {
     padding-left: 0.6rem;
-    padding-top: 0.6rem;
 }
+
+.infoWrapper {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.infoWrapper * h2 {
+    font-size: 2.1rem;
+}
+
+.infoWrapper * P {
+    font-size: 1.25rem;
+}
+
 
 /*.instagramInfoContainer>h2 {
     color: var(--color-red);
