@@ -336,8 +336,8 @@ li.temp {
     gap: 6rem;
 }
 
-.leftAboutPageWrapper>h1 {
-    padding-bottom: 0.6rem;
+.leftAboutPageWrapper::before {
+    content: 'About Me';
     font-size: 4.5rem;
 }
 
@@ -368,8 +368,9 @@ li.temp {
 }
 
 @media screen and (max-width: 1280px) {
-
     .aboutPageWrapper {
         flex-direction: column;
     }
 }
+
+/* contact page */
