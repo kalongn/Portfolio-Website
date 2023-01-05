@@ -374,3 +374,42 @@ li.temp {
 }
 
 /* contact page */
+
+.contactPageWrapper {
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.contactPageWrapper>.contactBox {
+    min-height: 33rem;
+    min-width: 27rem;
+    color: var(--color-invertedPrimary);
+    box-shadow: 0px 6px 30px rgba(39, 39, 50, 0.6);
+}
+
+.contactBox>h1 {
+    padding-top: 0.9rem;
+}
+
+.contactBox>* {
+    padding-left: 0.6rem;
+    padding-top: 0.6rem;
+}
+
+/*.instagramInfoContainer>h2 {
+    color: var(--color-red);
+    filter: brightness(0.6);
+}
+
+.emailInfoContainer>h2 {
+    color: var(--color-green);
+    filter: brightness(0.6);
+}
+
+.discordInfoContainer>h2 {
+    color: var(--color-blue);
+    filter: brightness(0.6);
+}*/
