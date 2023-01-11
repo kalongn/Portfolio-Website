@@ -262,7 +262,7 @@ li.temp {
     position: absolute;
     left: 1.5rem;
     bottom: 1.5rem;
-    color: var(--color-white);
+    color: var(--color-invertedPrimary);
 }
 
 #projectDescription {
