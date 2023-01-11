@@ -137,18 +137,15 @@ div ul li a img.icons {
 }
 
 div ul li:first-child:hover {
-    filter: drop-shadow(0 0 0 var(--color-red));
-    box-shadow: 0px 0px 6px rgba(255, 170, 170, 0.6)
+    filter: drop-shadow(0 3px 0 var(--color-red));
 }
 
 div ul li:nth-child(2):hover {
-    filter: drop-shadow(0 0 0 var(--color-green));
-    box-shadow: 0px 0px 6px rgba(107, 255, 176, 0.6)
+    filter: drop-shadow(0 3px 0 var(--color-green));
 }
 
 div ul li:last-child:hover {
-    filter: drop-shadow(0 0 0 var(--color-blue));
-    box-shadow: 0px 0px 6px rgba(105, 112, 255, 0.6)
+    filter: drop-shadow(0 3px 0 var(--color-blue));
 }
 
 li.temp {
