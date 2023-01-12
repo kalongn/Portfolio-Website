@@ -24,7 +24,6 @@ body {
     font-family: 'Chivo Mono', monospace;
     font-size: 1.3rem;
     color: var(--color-invertedPrimary);
-    transition: all .1s ease-in-out;
 }
 
 *.unselectable {
