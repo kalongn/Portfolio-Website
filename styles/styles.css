@@ -123,8 +123,11 @@ a:hover {
     }
 
     .headNavUl:first-child {
-        padding-top: 6px;
         margin-left: 0;
+    }
+
+    .headNavUl>li>img {
+        display: none;
     }
 
     .headNavUl>li:nth-child(2) {
@@ -133,6 +136,7 @@ a:hover {
 
     .headNavUl>li:last-child {
         margin-right: 0;
+        padding-bottom: 0.725rem;
     }
 
     .navToggleLabel {
@@ -166,6 +170,7 @@ a:hover {
     .navToggleLabel::after {
         top: 25px;
     }
+
 }
 
 /*Home page*/
