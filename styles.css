@@ -7,11 +7,16 @@
 }
 
 :root {
-    --color-white: #F6F6F6;
-    --color-black: #D9D9D9;
-    --color-light-purple: #090909;
-    --color-purple: #262626;
-    --color-dark-purple: #e22b68;
+    --color-white: #E4E5E1;
+    --color-black: #262626;
+    --color-light-purple: #D79AF4;
+    --color-purple: #D55AFF;
+    --color-dark-purple: #552167;
+}
+
+body {
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
 h1 {
