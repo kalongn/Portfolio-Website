@@ -58,10 +58,12 @@ function navButton(id) {
 
 const lightModeButton = document.getElementById('light-mode');
 const darkModeButton = document.getElementById('dark-mode');
+const body = document.body;
 function switchTheme(id) {
-    if(document.getElementById(id).classList.contains('active')) {
+    if (document.getElementById(id).classList.contains('active')) {
         return false;
     }
     toggleClass(lightModeButton, 'active');
     toggleClass(darkModeButton, 'active');
+    toggleClass(body, 'dark');
 }
