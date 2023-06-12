@@ -57,7 +57,7 @@ span {
     animation: rotation 20s infinite;
 }
 
-#blur-mouse-circle{
+#blur-mouse-circle {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -73,6 +73,7 @@ span {
     50% {
         scale: 1 1.5;
     }
+
     to {
         rotate: 360deg;
     }
