@@ -1,5 +1,5 @@
 const mouseCircle = document.getElementById("mouse-circle");
-const mainFrame = document.getElementById("main-frame-wrapper");
+const mainFrame = document.getElementById("overflow-mousehidden-wrapper");
 const padding = document.querySelector(".exterior-padding");
 const paddingStyles = padding.currentStyle || window.getComputedStyle(padding);
 let offSet = parseInt(paddingStyles.padding);

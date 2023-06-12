@@ -45,6 +45,12 @@ span {
     border: 3px solid var(--color-black);
     height: 100%;
     position: relative;
+}
+
+.overflow-mousehidden-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
