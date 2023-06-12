@@ -55,6 +55,7 @@ span {
     border-radius: 50%;
     z-index: 0;
     animation: rotation 20s infinite;
+    opacity: 40%;
 }
 
 #blur-mouse-circle {
@@ -62,7 +63,7 @@ span {
     width: 100%;
     position: absolute;
     z-index: 1;
-    backdrop-filter: blur(200px);
+    backdrop-filter: blur(100px);
 }
 
 @keyframes rotation {
