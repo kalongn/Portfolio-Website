@@ -1,5 +1,4 @@
 * {
-    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,11 +13,89 @@
     --color-dark-purple: #552167;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     background-color: var(--color-white);
     color: var(--color-black);
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
-h1 {
+span {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.exterior-padding {
+    padding: 64px;
+    height: 100%;
+}
+
+.main-frame-wrapper {
+    border: 3px solid var(--color-black);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#mouse-circle {
+    background: linear-gradient(to right,
+            var(--color-dark-purple),
+            var(--color-light-purple));
+    height: 250px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50;
+    translate: -50% -50%;
+    border-radius: 50%;
+    z-index: 0;
+    animation: rotation 20s infinite;
+}
+
+#blur-mouse-circle{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    backdrop-filter: blur(200px);
+}
+
+@keyframes rotation {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+.name-wrapper {
     font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    gap: -3px;
+    padding: 64px;
+    position: absolute;
+    z-index: 2;
+}
+
+.actual-name {
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+
+.name-positions {
+    opacity: 75%;
+    font-size: 1.5rem;
 }
