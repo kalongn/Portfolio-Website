@@ -162,8 +162,7 @@ span {
     opacity: 1;
 }
 
-.nav-link-button:hover::after,
-.nav-link-button.active::after {
+.nav-link-button:hover::after {
     width: 180px;
 }
 
