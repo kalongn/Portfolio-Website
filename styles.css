@@ -157,11 +157,13 @@ span {
     rotate: 90deg;
 }
 
-.nav-link-button:hover {
+.nav-link-button:hover,
+.nav-link-button.active {
     opacity: 1;
 }
 
-.nav-link-button:hover::after {
+.nav-link-button:hover::after,
+.nav-link-button.active::after {
     width: 180px;
 }
 
