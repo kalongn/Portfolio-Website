@@ -60,7 +60,7 @@ span {
     translate: -50% -50%;
     z-index: 0;
     animation: rotation 20s infinite;
-    opacity: 40%;
+    opacity: 15%;
 }
 
 #blur-mouse-circle {
