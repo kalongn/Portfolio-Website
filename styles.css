@@ -22,8 +22,14 @@ body {
     background-color: var(--color-white);
     color: var(--color-black);
     font-family: 'Raleway', sans-serif;
+    font-weight: 300;
     height: 100%;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-black);
 }
 
 span {
@@ -44,7 +50,7 @@ span {
 
 #mouse-circle {
     background: linear-gradient(to right,
-            var(--color-dark-purple),
+            var(--color-purple),
             var(--color-light-purple));
     height: 250px;
     aspect-ratio: 1;
@@ -52,7 +58,6 @@ span {
     left: 50%;
     top: 50;
     translate: -50% -50%;
-    border-radius: 50%;
     z-index: 0;
     animation: rotation 20s infinite;
     opacity: 40%;
@@ -100,4 +105,73 @@ span {
 .name-positions {
     opacity: 75%;
     font-size: 1.5rem;
+}
+
+.nav-link-wrapper {
+    position: absolute;
+    z-index: 2;
+    height: 150px;
+    width: 180px;
+    top: 50%;
+    translate: 0 -50%;
+    margin-left: 64px;
+}
+
+.nav-links {
+    display: inline-block;
+    height: 100%;
+    width: max-content;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 1rem;
+}
+
+.nav-link-button {
+    margin-left: 32px;
+    opacity: .5;
+    transition: opacity 200ms ease-in-out;
+    position: relative;
+}
+
+.nav-link-button::before {
+    content: '';
+    position: absolute;
+    height: 12px;
+    aspect-ratio: 1;
+    background-color: var(--color-black);
+    left: -1.125rem;
+    top: 5px;
+    rotate: 0deg;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out, rotate 300ms ease-in-out;
+}
+
+.nav-link-button.active::before {
+    opacity: 1;
+}
+
+.nav-link-button.active:hover::before {
+    rotate: 90deg;
+}
+
+.nav-link-button:hover {
+    opacity: 1;
+}
+
+.nav-link-button:hover::after {
+    width: 180px;
+}
+
+.nav-link-button::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    margin-top: 1px;
+    display: block;
+    background: linear-gradient(0.25turn, var(--color-black), transparent);
+    border-radius: 9px;
+    transition: width 300ms ease-in-out;
 }
