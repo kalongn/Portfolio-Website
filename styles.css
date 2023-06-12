@@ -150,18 +150,20 @@ span {
     background-color: var(--color-black);
     left: -1.125rem;
     top: 5px;
-    rotate: 0deg;
     opacity: 0;
-    transition: opacity 300ms ease-in-out, rotate 300ms ease-in-out;
+    scale: 0;
+    transition: opacity 300ms ease-in-out, scale 300ms ease-in-out;
 }
 
 .nav-link-button.active::before {
     opacity: 1;
+    scale: 1;
 }
 
 .nav-link-button.active:hover::before {
-    rotate: 90deg;
+    scale: 1;
 }
+
 
 .nav-link-button:hover,
 .nav-link-button.active {
@@ -230,7 +232,7 @@ span {
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     bottom: 64px;
-    left: -32px
+    left: -27px
 }
 
 .raleway-font {
@@ -239,4 +241,50 @@ span {
 
 .playfair-font {
     font-family: 'Playfair Display', serif;
+}
+
+.theme {
+    position: absolute;
+    z-index: 2;
+    right: 64px;
+    top: -27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.button-border {
+    position: relative;
+    border: 1px solid var(--color-black);
+    display: block;
+    height: 20px;
+    aspect-ratio: 1;
+}
+
+.button-border::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1;
+    display: block;
+    background-color: var(--color-black);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    scale: 0;
+    transition: scale 300ms ease-in-out;
+}
+
+.active .button-border::before {
+    scale: 1;
 }
