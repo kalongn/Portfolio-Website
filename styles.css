@@ -28,7 +28,7 @@ body {
     transition: all 300ms ease-in-out;
 }
 
-body.dark  {
+body.dark {
     background-color: var(--color-black);
     color: var(--color-white);
 }
@@ -84,7 +84,7 @@ span {
     opacity: 15%;
 }
 
-.dark #mouse-circle  {
+.dark #mouse-circle {
     background: linear-gradient(to right,
             var(--color-light-purple),
             var(--color-dark-purple));
@@ -147,7 +147,7 @@ span {
 .nav-links {
     display: inline-block;
     height: 100%;
-    width: 180px;
+    width: 100%;
     font-size: 1.125rem;
     display: flex;
     flex-direction: column;
@@ -261,7 +261,7 @@ span {
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     bottom: 64px;
-    left: -27px
+    left: -27px;
 }
 
 .raleway-font {
@@ -324,4 +324,92 @@ span {
 
 .active .button-border::before {
     scale: 1;
+}
+
+@media screen and (max-width: 1280px) {
+    #mouse-circle {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #mouse-circle {
+        height: 180px;
+    }
+
+    .exterior-padding {
+        padding: 24px;
+    }
+
+    .name-wrapper {
+        padding: 16px;
+    }
+
+    .actual-name {
+        font-size: 2rem;
+    }
+
+    .name-positions {
+        font-size: .75rem;
+    }
+
+    .nav-link-wrapper {
+        height: 105px;
+        width: 72px;
+        margin-left: 16px;
+        top: 25%;
+    }
+
+    .nav-links {
+        font-size: .75rem;
+        gap: 9px;
+    }
+
+    .nav-link-button {
+        margin-left: 16px;
+    }
+
+    .nav-link-button::before {
+        height: 9px;
+        left: -12px;
+        top: 3px;
+    }
+
+    .nav-link-button::after {
+        margin-top: 3px;
+    }
+
+    .bottom-phrase-wrapper {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .english-phrase {
+        font-size: .5rem;
+    }
+
+    .chinese-phrase {
+        font-size: 1.125rem;
+    }
+
+    .hover-effect-text::after {
+        height: 2px;
+    }
+
+    .fonts-wrapper {
+        font-size: .75rem;
+        bottom: 16px;
+        left: -21px;
+    }
+
+    .theme {
+        right: 16px;
+        top: -21px;
+        font-size: .75rem;
+    }
+
+    .button-border {
+        height: 12px;
+    }
+
 }
