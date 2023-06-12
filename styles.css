@@ -120,7 +120,7 @@ span {
 .nav-links {
     display: inline-block;
     height: 100%;
-    width: max-content;
+    width: 180px;
     font-size: 1.125rem;
     display: flex;
     flex-direction: column;
@@ -163,7 +163,7 @@ span {
 }
 
 .nav-link-button:hover::after {
-    width: 180px;
+    width: 100%;
 }
 
 .nav-link-button::after {
@@ -175,4 +175,44 @@ span {
     background: linear-gradient(0.25turn, var(--color-black), transparent);
     border-radius: 9px;
     transition: width 300ms ease-in-out;
+}
+
+.bottom-phrase-wrapper {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    bottom: 64px;
+    right: 64px;
+}
+
+.english-phrase {
+    text-align: right;
+}
+
+.chinese-phrase {
+    font-size: 2.25rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+.hover-effect-text:hover::after {
+    width: 100%;
+}
+
+.hover-effect-text {
+    position: relative;
+}
+
+.hover-effect-text::after {
+    content: '';
+    width: 0;
+    position: absolute;
+    display: block;
+    height: 3px;
+    right: 0;
+    background: linear-gradient(0.75turn, var(--color-purple), transparent);
+    transition: width 300ms ease-in-out;
+    background-clip: text;
 }
