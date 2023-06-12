@@ -222,3 +222,21 @@ span {
     transition: width 300ms ease-in-out;
     background-clip: text;
 }
+
+.fonts-wrapper {
+    position: absolute;
+    z-index: 2;
+    font-size: 1.125rem;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    bottom: 64px;
+    left: -32px
+}
+
+.raleway-font {
+    font-family: 'Raleway', sans-serif;
+}
+
+.playfair-font {
+    font-family: 'Playfair Display', serif;
+}
