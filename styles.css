@@ -52,7 +52,7 @@ span {
     background: linear-gradient(to right,
             var(--color-purple),
             var(--color-light-purple));
-    height: 250px;
+    height: 500px;
     aspect-ratio: 1;
     position: absolute;
     left: 50%;

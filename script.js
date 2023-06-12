@@ -9,7 +9,7 @@ mainFrame.onpointermove = event => {
     mouseCircle.animate({
         left: `${clientX - offSet}px`,
         top: `${clientY - offSet}px`
-    }, { duration: 1000, fill: "forwards" });
+    }, { duration: 1500, fill: "forwards" });
 }
 
 /**
