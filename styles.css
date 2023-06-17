@@ -154,7 +154,6 @@ span {
 }
 
 .nav-links {
-    display: inline-block;
     height: 100%;
     width: 100%;
     font-size: 1.125rem;
@@ -363,15 +362,18 @@ span {
     }
 
     .nav-link-wrapper {
-        height: 105px;
-        width: 72px;
-        margin-left: 16px;
+        height: 30px;
+        min-width: 270px;
         top: 25%;
+        left: 50%;
+        translate: -50% 0%;
+        margin-left: 0px;
     }
 
     .nav-links {
         font-size: .75rem;
         gap: 9px;
+        flex-direction: row;
     }
 
     .nav-link-button {
@@ -390,15 +392,19 @@ span {
 
     .bottom-phrase-wrapper {
         bottom: 16px;
-        right: 16px;
+        align-items: center;
+        left: 50%;
+        translate: -50% 0%;
     }
 
     .english-phrase {
         font-size: .5rem;
+        text-align: center;
     }
 
     .chinese-phrase {
         font-size: 1.125rem;
+        text-align: center;
     }
 
     .hover-effect-text::after {
