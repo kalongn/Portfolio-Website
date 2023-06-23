@@ -53,13 +53,17 @@ function navButton(id) {
         return false;
     }
     homeLeft.style.opacity = 0;
+    homeLeft.style.visibility = "hidden";
     projectLeft.style.opacity = 0;
+    projectLeft.style.visibility = "hidden";
     switch (id) {
         case 'home':
             homeLeft.style.opacity = 1;
+            homeLeft.style.visibility = "visible";
             break;
         case 'projects':
             projectLeft.style.opacity = 1;
+            projectLeft.style.visibility = "visible";
             break;
         default:
             break;
