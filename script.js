@@ -46,9 +46,23 @@ function removeClass(el, name) {
 }
 
 let prevActive = document.getElementById('home');
+const homeLeft = document.getElementById('home-page-right');
+const projectLeft = document.getElementById('project-page-right');
 function navButton(id) {
     if (document.getElementById(id).classList.contains('active')) {
         return false;
+    }
+    homeLeft.style.opacity = 0;
+    projectLeft.style.opacity = 0;
+    switch (id) {
+        case 'home':
+            homeLeft.style.opacity = 1;
+            break;
+        case 'projects':
+            projectLeft.style.opacity = 1;
+            break;
+        default:
+            break;
     }
     removeClass(prevActive, 'active');
     prevActive = document.getElementById(id);

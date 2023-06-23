@@ -334,6 +334,51 @@ span {
     scale: 1;
 }
 
+.projects-list-wrapper {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    top: 4rem;
+    right: 4rem;
+    max-height: 85%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.projects-list-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.project-header {
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+}
+
+.project-header:hover {
+    opacity: .5;
+}
+
+.project-details {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.porject-list {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    text-align: end;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.page-right-items {
+    transition: opacity 300ms ease-in-out;
+}
+
 @media screen and (max-width: 1280px) {
     #mouse-circle {
         height: 350px;
