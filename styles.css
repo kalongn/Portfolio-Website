@@ -344,6 +344,7 @@ span {
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    max-width: fit-content;
 }
 
 .projects-list-wrapper::-webkit-scrollbar {
@@ -366,7 +367,7 @@ span {
     font-weight: 200;
 }
 
-.porject-list {
+.project-list {
     display: flex;
     align-items: end;
     justify-content: end;
@@ -382,6 +383,18 @@ span {
 @media screen and (max-width: 1280px) {
     #mouse-circle {
         height: 350px;
+    }
+
+    .projects-list-wrapper {
+        width: 256px;
+    }
+
+    .project-header {
+        font-size: 1.75rem;
+    }
+
+    .project-details {
+        font-size: .75rem;
     }
 }
 
@@ -472,4 +485,26 @@ span {
         height: 12px;
     }
 
+    .project-list {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .projects-list-wrapper {
+        top: initial;
+        left: 50%;
+        translate: -50% 0%;
+        width: 256px;
+        bottom: 16px;
+        max-height: 375px;
+    }
+
+    .project-header {
+        font-size: 1.5rem;
+    }
+
+    .project-details {
+        font-size: .5rem;
+    }
 }
