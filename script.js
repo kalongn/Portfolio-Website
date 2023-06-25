@@ -47,26 +47,33 @@ function removeClass(el, name) {
 
 let prevActive = document.getElementById('home');
 const fontsDisplay = document.getElementById('fonts-wrapper');
-const homeLeft = document.getElementById('home-page-right');
-const projectLeft = document.getElementById('project-page-right');
+const homeRight = document.getElementById('home-page-right');
+const projectRight = document.getElementById('project-page-right');
+const aboutRight = document.getElementById('about-page-right');
 function navButton(id) {
     if (document.getElementById(id).classList.contains('active')) {
         return false;
     }
-    homeLeft.style.opacity = 0;
-    homeLeft.style.visibility = "hidden";
-    projectLeft.style.opacity = 0;
-    projectLeft.style.visibility = "hidden";
+    homeRight.style.opacity = 0;
+    homeRight.style.visibility = "hidden";
+    projectRight.style.opacity = 0;
+    projectRight.style.visibility = "hidden";
     fontsDisplay.style.opacity = 0;
+    aboutRight.style.opacity = 0;
+    aboutRight.style.visibility = "hidden";
     switch (id) {
         case 'home':
-            homeLeft.style.opacity = 1;
+            homeRight.style.opacity = 1;
             fontsDisplay.style.opacity = 1;
-            homeLeft.style.visibility = "visible";
+            homeRight.style.visibility = "visible";
             break;
         case 'projects':
-            projectLeft.style.opacity = 1;
-            projectLeft.style.visibility = "visible";
+            projectRight.style.opacity = 1;
+            projectRight.style.visibility = "visible";
+            break;
+        case 'about':
+            aboutRight.style.opacity = 1;
+            aboutRight.style.visibility = "visible"
             break;
         default:
             break;
