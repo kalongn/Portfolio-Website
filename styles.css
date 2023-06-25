@@ -270,6 +270,7 @@ span {
     transform: rotate(-180deg);
     bottom: 64px;
     left: -27px;
+    transition: opacity 300ms ease-in-out
 }
 
 .raleway-font {
