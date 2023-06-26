@@ -51,7 +51,7 @@ a {
 }
 
 
-span {
+.name-positions>span {
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -391,11 +391,12 @@ span {
     align-items: end;
     justify-content: end;
     flex-direction: column;
-    width: 250px;
+    width: 270px;
     gap: 2rem;
     bottom: 50%;
     right: 64px;
     translate: 0 50%;
+    font-size: 1.25rem;  
 }
 
 .about-text {
@@ -540,5 +541,17 @@ span {
 
     .project-details {
         font-size: .5rem;
+    }
+
+    .about-page-right {
+        align-items: center;
+        justify-content: center;
+        bottom: 16px;
+        left: 50%;
+        translate: -50% 0;
+    }
+
+    .about-text {
+        text-align: center;
     }
 }
