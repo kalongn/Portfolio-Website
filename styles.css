@@ -225,12 +225,13 @@ a {
 }
 
 .english-phrase {
+    font-size: 1.25rem;
     text-align: right;
 }
 
 .chinese-phrase {
-    font-size: 2.25rem;
-    font-weight: 400;
+    font-size: 3rem;
+    font-weight: 600;
     text-align: right;
 }
 
@@ -404,7 +405,7 @@ a {
 .contct-page-right {
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     opacity: 0;
     visibility: hidden;
     bottom: 64px;
@@ -485,20 +486,24 @@ a {
         right: 0;
         left: 50%;
         translate: -50% 0%;
+        width: max-content;
     }
 
     .english-phrase {
-        font-size: .75rem;
+        font-size: 1rem;
         text-align: center;
     }
 
     .chinese-phrase {
-        font-size: 1.25rem;
+        font-size: 2rem;
         text-align: center;
     }
 
     .hover-effect-text::after {
         height: 2px;
+        left: 50%;
+        translate: -50% 0;
+        background: linear-gradient(0.75turn, transparent, var(--color-purple), transparent);
     }
 
     .fonts-wrapper {
@@ -554,5 +559,9 @@ a {
 
     .contct-page-right {
         align-items: center;
+        bottom: 16px;
+        left: 50%;
+        translate: -50% 0;
+        width: max-content;
     }
 }
