@@ -117,7 +117,6 @@ a {
 }
 
 .name-wrapper {
-    font-family: 'Playfair Display', serif;
     display: flex;
     justify-content: left;
     align-items: left;
@@ -130,7 +129,7 @@ a {
 
 .actual-name {
     font-size: 4.5rem;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 .name-positions {
@@ -266,10 +265,6 @@ a {
     bottom: 64px;
     left: -27px;
     transition: opacity 300ms ease-in-out
-}
-
-.raleway-font {
-    font-family: 'Raleway', sans-serif;
 }
 
 .playfair-font {
