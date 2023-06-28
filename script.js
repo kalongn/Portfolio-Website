@@ -50,6 +50,7 @@ const fontsDisplay = document.getElementById('fonts-wrapper');
 const homeRight = document.getElementById('home-page-right');
 const projectRight = document.getElementById('project-page-right');
 const aboutRight = document.getElementById('about-page-right');
+const contactRight = document.getElementById('contact-page-right');
 function navButton(id) {
     if (document.getElementById(id).classList.contains('active')) {
         return false;
@@ -61,6 +62,8 @@ function navButton(id) {
     fontsDisplay.style.opacity = 0;
     aboutRight.style.opacity = 0;
     aboutRight.style.visibility = "hidden";
+    contactRight.style.opacity = 0;
+    contactRight.style.visibility = "hidden";
     switch (id) {
         case 'home':
             homeRight.style.opacity = 1;
@@ -73,8 +76,11 @@ function navButton(id) {
             break;
         case 'about':
             aboutRight.style.opacity = 1;
-            aboutRight.style.visibility = "visible"
+            aboutRight.style.visibility = "visible";
             break;
+        case 'contact':
+            contactRight.style.opacity = 1;
+            contactRight.style.visibility = "visible";
         default:
             break;
     }

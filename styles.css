@@ -217,8 +217,6 @@ a {
 }
 
 .bottom-phrase-wrapper {
-    position: absolute;
-    z-index: 2;
     display: flex;
     align-items: end;
     flex-direction: column;
@@ -328,8 +326,6 @@ a {
 .projects-list-wrapper {
     opacity: 0;
     visibility: hidden;
-    position: absolute;
-    z-index: 2;
     top: 4rem;
     right: 4rem;
     max-height: 85%;
@@ -369,12 +365,12 @@ a {
 }
 
 .page-right-items {
+    position: absolute;
+    z-index: 2;
     transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
 }
 
 .about-page-right {
-    position: absolute;
-    z-index: 2;
     opacity: 0;
     visibility: hidden;
     display: flex;
@@ -386,7 +382,7 @@ a {
     bottom: 50%;
     right: 64px;
     translate: 0 50%;
-    font-size: 1.25rem;  
+    font-size: 1.25rem;
 }
 
 .about-text {
@@ -403,6 +399,16 @@ a {
 
 .link:hover {
     opacity: .5;
+}
+
+.contct-page-right {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 64px;
+    right: 64px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -476,17 +482,18 @@ a {
     .bottom-phrase-wrapper {
         bottom: 16px;
         align-items: center;
+        right: 0;
         left: 50%;
         translate: -50% 0%;
     }
 
     .english-phrase {
-        font-size: .5rem;
+        font-size: .75rem;
         text-align: center;
     }
 
     .chinese-phrase {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         text-align: center;
     }
 
@@ -543,5 +550,9 @@ a {
 
     .about-text {
         text-align: center;
+    }
+
+    .contct-page-right {
+        align-items: center;
     }
 }
