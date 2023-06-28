@@ -533,7 +533,7 @@ a {
         top: initial;
         left: 50%;
         translate: -50% 0%;
-        width: 256px;
+        min-width: 256px;
         bottom: 16px;
         max-height: 375px;
     }
@@ -543,7 +543,7 @@ a {
     }
 
     .project-details {
-        font-size: .5rem;
+        font-size: .75rem;
     }
 
     .about-page-right {
