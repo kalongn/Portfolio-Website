@@ -50,11 +50,6 @@ a {
     color: var(--color-white);
 }
 
-
-.name-positions>span {
-    font-family: 'Times New Roman', Times, serif;
-}
-
 .exterior-padding {
     padding: 64px;
     height: 100%;
