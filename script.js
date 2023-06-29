@@ -1,5 +1,6 @@
 'use strict';
 
+// The Mouse following Blob Code
 const mouseCircle = document.getElementById("mouse-circle");
 const mainFrame = document.getElementById("overflow-mousehidden-wrapper");
 const padding = document.querySelector(".exterior-padding");
@@ -47,42 +48,37 @@ function removeClass(el, name) {
     el.classList.remove(name);
 }
 
+// Code for the navigation bar.
+
 let prevActive = document.getElementById('home');
 const fontsDisplay = document.getElementById('fonts-wrapper');
 const homeRight = document.getElementById('home-page-right');
 const projectRight = document.getElementById('project-page-right');
 const aboutRight = document.getElementById('about-page-right');
 const contactRight = document.getElementById('contact-page-right');
+
 function navButton(id) {
     if (document.getElementById(id).classList.contains('active')) {
         return false;
     }
-    homeRight.style.opacity = 0;
-    homeRight.style.visibility = "hidden";
-    projectRight.style.opacity = 0;
-    projectRight.style.visibility = "hidden";
+    hideElement(homeRight);
+    hideElement(projectRight);
+    hideElement(aboutRight);
+    hideElement(contactRight);
     fontsDisplay.style.opacity = 0;
-    aboutRight.style.opacity = 0;
-    aboutRight.style.visibility = "hidden";
-    contactRight.style.opacity = 0;
-    contactRight.style.visibility = "hidden";
     switch (id) {
         case 'home':
-            homeRight.style.opacity = 1;
+            showElement(homeRight);
             fontsDisplay.style.opacity = 1;
-            homeRight.style.visibility = "visible";
             break;
         case 'projects':
-            projectRight.style.opacity = 1;
-            projectRight.style.visibility = "visible";
+            showElement(projectRight);
             break;
         case 'about':
-            aboutRight.style.opacity = 1;
-            aboutRight.style.visibility = "visible";
+            showElement(aboutRight);
             break;
         case 'contact':
-            contactRight.style.opacity = 1;
-            contactRight.style.visibility = "visible";
+            showElement(contactRight);
         default:
             break;
     }
@@ -92,6 +88,20 @@ function navButton(id) {
     return false;
 }
 
+// Helper function to hide an element
+function hideElement(element) {
+    element.style.opacity = 0;
+    element.style.visibility = 'hidden';
+}
+
+// Helper function to show an element
+function showElement(element) {
+    element.style.opacity = 1;
+    element.style.visibility = 'visible';
+}
+
+
+// Code for the theme of the webpage.
 const lightModeButton = document.getElementById('light-mode');
 const darkModeButton = document.getElementById('dark-mode');
 const body = document.body;
