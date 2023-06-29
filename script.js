@@ -1,3 +1,5 @@
+'use strict';
+
 const mouseCircle = document.getElementById("mouse-circle");
 const mainFrame = document.getElementById("overflow-mousehidden-wrapper");
 const padding = document.querySelector(".exterior-padding");

@@ -50,6 +50,11 @@ a {
     color: var(--color-white);
 }
 
+.on-top {
+    position: absolute;
+    z-index: 2;
+}
+
 .exterior-padding {
     padding: 64px;
     height: 100%;
@@ -123,8 +128,6 @@ a {
     flex-direction: column;
     gap: -3px;
     padding: 64px;
-    position: absolute;
-    z-index: 2;
 }
 
 .actual-name {
@@ -138,8 +141,6 @@ a {
 }
 
 .nav-link-wrapper {
-    position: absolute;
-    z-index: 2;
     height: 150px;
     width: 180px;
     top: 50%;
@@ -257,8 +258,6 @@ a {
 }
 
 .fonts-wrapper {
-    position: absolute;
-    z-index: 2;
     font-size: 1.125rem;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
@@ -272,8 +271,6 @@ a {
 }
 
 .theme {
-    position: absolute;
-    z-index: 2;
     right: 64px;
     top: -27px;
     display: flex;
