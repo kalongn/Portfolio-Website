@@ -2,16 +2,12 @@
 
 // The Mouse following Blob Code
 const mouseCircle = document.getElementById("mouse-circle");
-const mainFrame = document.getElementById("overflow-mousehidden-wrapper");
-const padding = document.querySelector(".exterior-padding");
-const paddingStyles = padding.currentStyle || window.getComputedStyle(padding);
-let offSet = parseInt(paddingStyles.padding);
 
-mainFrame.onpointermove = event => {
+document.onpointermove = event => {
     const { clientX, clientY } = event;
     mouseCircle.animate({
-        left: `${clientX - offSet}px`,
-        top: `${clientY - offSet}px`
+        left: `${clientX}px`,
+        top: `${clientY}px`
     }, { duration: 1500, fill: "forwards" });
 }
 
