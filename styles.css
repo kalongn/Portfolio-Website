@@ -8,9 +8,8 @@
 :root {
     --color-white: #E4E5E1;
     --color-black: #262626;
-    --color-light-purple: #D79AF4;
     --color-purple: #D55AFF;
-    --color-dark-purple: #552167;
+    --color-green: #2AA500;
 }
 
 html {
@@ -78,9 +77,9 @@ a {
 }
 
 #mouse-circle {
-    background: linear-gradient(to right,
-            var(--color-purple),
-            var(--color-light-purple));
+    background: radial-gradient(var(--color-purple),
+            transparent);
+    filter: invert(1);
     height: 500px;
     aspect-ratio: 1;
     position: absolute;
@@ -90,13 +89,11 @@ a {
     border-radius: 50%;
     z-index: 0;
     animation: rotation 20s infinite;
-    opacity: 15%;
+    opacity: .15;
 }
 
 .dark #mouse-circle {
-    background: linear-gradient(to right,
-            var(--color-light-purple),
-            var(--color-dark-purple));
+    filter: invert(0);
 }
 
 #blur-mouse-circle {
@@ -104,7 +101,7 @@ a {
     width: 100%;
     position: absolute;
     z-index: 1;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(60px);
 }
 
 @keyframes rotation {
@@ -119,6 +116,20 @@ a {
     to {
         rotate: 360deg;
     }
+}
+
+#background-page-indicator {
+    color: var(--color-white);
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    font-size: 12rem;
+    font-weight: 500;
+    transition: color 50ms ease;
+}
+
+.dark #background-page-indicator {
+    color: var(--color-black);
 }
 
 .name-wrapper {
@@ -161,9 +172,9 @@ a {
 }
 
 .nav-link-button {
-    margin-left: 32px;
     opacity: .5;
-    transition: opacity 200ms ease-in-out;
+    scale: 1;
+    transition: opacity 300ms ease-in-out, scale 300ms ease-in-out;
     position: relative;
 }
 
@@ -177,6 +188,7 @@ a {
     top: 5px;
     opacity: 0;
     scale: 0;
+    pointer-events: none;
     transition: opacity 300ms ease-in-out, scale 300ms ease-in-out;
 }
 
@@ -199,25 +211,6 @@ a {
     opacity: 1;
 }
 
-.nav-link-button:hover::after {
-    width: 100%;
-}
-
-.nav-link-button::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    margin-top: 1px;
-    display: block;
-    background: linear-gradient(0.25turn, var(--color-black), transparent);
-    border-radius: 9px;
-    transition: width 300ms ease-in-out;
-}
-
-.dark .nav-link-button::after {
-    background: linear-gradient(0.25turn, var(--color-white), transparent);
-}
-
 .bottom-phrase-wrapper {
     display: flex;
     align-items: end;
@@ -237,33 +230,13 @@ a {
     text-align: right;
 }
 
-.hover-effect-text:hover::after {
-    width: 100%;
-}
-
-.hover-effect-text {
-    position: relative;
-}
-
-.hover-effect-text::after {
-    content: '';
-    width: 0;
-    position: absolute;
-    display: block;
-    height: 3px;
-    right: 0;
-    background: linear-gradient(0.75turn, var(--color-purple), transparent);
-    transition: width 300ms ease-in-out;
-    background-clip: text;
-}
-
 .fonts-wrapper {
     font-size: 1.125rem;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     bottom: 64px;
     left: -27px;
-    transition: opacity 300ms ease-in-out
+    transition: opacity 300ms ease-in-out;
 }
 
 .playfair-font {
@@ -426,6 +399,10 @@ a {
     .project-details {
         font-size: .75rem;
     }
+
+    #background-page-indicator {
+        font-size: 8rem;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -435,6 +412,10 @@ a {
 
     .exterior-padding {
         padding: 24px;
+    }
+
+    #background-page-indicator {
+        font-size: 5rem;
     }
 
     .name-wrapper {
@@ -532,7 +513,7 @@ a {
         translate: -50% 0%;
         min-width: 256px;
         bottom: 16px;
-        max-height: 375px;
+        max-height: 300px;
     }
 
     .project-header {

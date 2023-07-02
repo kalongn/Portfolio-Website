@@ -52,6 +52,7 @@ const homeRight = document.getElementById('home-page-right');
 const projectRight = document.getElementById('project-page-right');
 const aboutRight = document.getElementById('about-page-right');
 const contactRight = document.getElementById('contact-page-right');
+const backgroundText = document.getElementById('background-page-indicator')
 
 function navButton(id) {
     if (document.getElementById(id).classList.contains('active')) {
@@ -62,6 +63,7 @@ function navButton(id) {
     hideElement(aboutRight);
     hideElement(contactRight);
     fontsDisplay.style.opacity = 0;
+    backgroundText.innerHTML = id;
     switch (id) {
         case 'home':
             showElement(homeRight);
