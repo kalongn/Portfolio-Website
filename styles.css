@@ -77,9 +77,8 @@ a {
 }
 
 #mouse-circle {
-    background: radial-gradient(var(--color-purple),
+    background: radial-gradient(var(--color-green),
             transparent);
-    filter: invert(1);
     height: 500px;
     aspect-ratio: 1;
     position: absolute;
@@ -89,11 +88,12 @@ a {
     border-radius: 50%;
     z-index: 0;
     animation: rotation 20s infinite;
-    opacity: .15;
+    opacity: .12;
 }
 
 .dark #mouse-circle {
-    filter: invert(0);
+    background: radial-gradient(var(--color-purple),
+            transparent);
 }
 
 #blur-mouse-circle {
@@ -101,7 +101,7 @@ a {
     width: 100%;
     position: absolute;
     z-index: 1;
-    backdrop-filter: blur(60px);
+    backdrop-filter: blur(90px);
 }
 
 @keyframes rotation {
@@ -226,8 +226,7 @@ a {
 
 .chinese-phrase {
     font-size: 3rem;
-    font-weight: 600;
-    text-align: right;
+    font-weight: 400;
 }
 
 .fonts-wrapper {
@@ -346,8 +345,6 @@ a {
     opacity: 0;
     visibility: hidden;
     display: flex;
-    align-items: end;
-    justify-content: end;
     flex-direction: column;
     width: 270px;
     gap: 2rem;
@@ -358,8 +355,7 @@ a {
 }
 
 .about-text {
-    text-align: right;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .link {
@@ -476,13 +472,6 @@ a {
     .chinese-phrase {
         font-size: 2rem;
         text-align: center;
-    }
-
-    .hover-effect-text::after {
-        height: 2px;
-        left: 50%;
-        translate: -50% 0;
-        background: linear-gradient(0.75turn, transparent, var(--color-purple), transparent);
     }
 
     .fonts-wrapper {
