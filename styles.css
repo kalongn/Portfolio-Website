@@ -33,6 +33,7 @@ body.dark {
 }
 
 a {
+    cursor: pointer;
     text-decoration: none;
     color: var(--color-black);
 }
